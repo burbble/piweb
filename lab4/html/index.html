@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Опросы и Исследования</title>    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Опросы и Исследования: Ваше Мнение Важно!</h1>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <article class="article">
+            <form id="surveyForm">
+                <div class="form-group">
+                    <span>Имя:</span>
+                    <input type="text" name="name" required placeholder="Введите имя" pattern="[A-Za-zА-Яа-яЁё\s]+">
+                </div>
+                <div class="form-group">
+                    <span>Веб-сайт:</span>
+                    <input type="url" name="website" required placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <span>Email:</span>
+                    <input type="email" name="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <span>Телефон:</span>
+                    <input type="tel" name="phone" id="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <div class="form-group">
+                    <span>Дата рождения:</span>
+                    <input type="date" name="birthdate" required>
+                </div>
+                
+                <fieldset>
+                    <legend>Пол:</legend>
+                    <div class="form-group">
+                        <span>Мужской:</span>
+                        <input type="radio" name="gender" value="male" required>
+                        <span>Женский:</span>
+                        <input type="radio" name="gender" value="female">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Интересы:</legend>
+                    <div class="form-group">
+                        <span>Спорт:</span>
+                        <input type="checkbox" name="interests" value="sport">
+                        <span>Музыка:</span>
+                        <input type="checkbox" name="interests" value="music">
+                    </div>
+                </fieldset>
+                
+                <div class="form-buttons">
+                    <button type="reset">Очистить</button>
+                    <button type="submit">Посмотреть результаты</button>
+                </div>
+            </form>
+        </article>
+        <aside class="aside">Дополнительная информация: Здесь вы можете найти дополнительные ресурсы и информацию о наших опросах и исследованиях. Мы ценим ваше мнение и стремимся улучшить наши услуги.</aside>
+        <footer class="footer">Контакты:
+            <li>Телефон: +7 (999) 999-99-99</li>
+            <li>Email: info@example.com</li>
+            <li>Адрес: ул. Примерная, 123, Москва, Россия</li>
+        </footer>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

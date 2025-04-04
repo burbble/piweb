@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телефонная база данных</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Телефонная база данных</h1>
+    
+    <div class="container">
+        <div class="form-section">
+            <h2>Форма ввода данных</h2>
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" id="id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефона:</label>
+                <input type="text" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="debt">Задолженность по оплате:</label>
+                <select id="debt" required>
+                    <option value="true">Есть задолженность</option>
+                    <option value="false">Нет задолженности</option>
+                </select>
+            </div>
+            
+            <button id="addBtn">Добавить запись</button>
+            <button id="clearBtn">Очистить форму</button>
+            
+            <div class="property-controls">
+                <h3>Дополнительные свойства</h3>
+                <div class="form-group">
+                    <label for="propertySelect">Выберите свойство:</label>
+                    <select id="propertySelect"></select>
+                </div>
+                <div class="form-group">
+                    <label for="propertyValue">Значение свойства:</label>
+                    <input type="text" id="propertyValue">
+                </div>
+                <button id="addPropertyBtn">Добавить свойство</button>
+                <button id="removePropertyBtn">Убрать свойство</button>
+            </div>
+        </div>
+        
+        <div class="output-section">
+            <h2>Управление данными</h2>
+            <div class="form-group">
+                <label for="recordSelect">Выберите запись по ID:</label>
+                <select id="recordSelect"></select>
+            </div>
+            
+            <button id="deleteBtn">Удалить запись</button>
+            <button id="showDebtorsBtn">Показать должников</button>
+            
+            <div id="additionalInfo" class="additional-property"></div>
+            
+            <h3>Все записи</h3>
+            <div id="recordsTable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ФИО</th>
+                            <th>Телефон</th>
+                            <th>Адрес</th>
+                            <th>Задолженность</th>
+                            <th>Доп. свойства</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

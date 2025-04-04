@@ -1,0 +1,112 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.header {
+    flex: 1 0 100%;
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 10vh;
+}
+
+.nav {
+    flex: 0 0 200px;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.article {
+    flex: 1 0 60%;
+    padding: 20px;
+    background: url('../resources/image\ copy.png') no-repeat center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.aside {
+    flex: 0 0 200px;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.footer {
+    flex: 1 0 100%;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.form-group span {
+    text-align: right;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #333;
+    border-radius: 4px;
+}
+
+.form-group input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+fieldset {
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form-group input:invalid {
+    border-color: #ff0000;
+}
+
+.form-group input:valid {
+    border-color: #00cc00;
+}
+
+.form-group input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0052a3;
+}

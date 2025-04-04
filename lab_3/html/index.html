@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамический текст</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Работа с текстом и DOM элементами</h1>
+        </header>
+        
+        <nav>
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <section>
+            <header>
+                <h2>Редактирование текста</h2>
+            </header>
+            
+            <article>
+                <div class="form-group">
+                    <label for="textInput">Текст для вставки:</label>
+                    <input type="text" id="textInput" placeholder="Введите текст...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="styleSelect">Выберите стиль текста:</label>
+                    <select id="styleSelect">
+                        <option value="font-small">Маленький шрифт</option>
+                        <option value="color-green">Зеленый цвет</option>
+                        <option value="bold">Жирный шрифт</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="textArea">Основной текст:</label>
+                    <textarea id="textArea" rows="5" cols="30" placeholder="Введите основной текст..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button id="beforeBtn">Before</button>
+                    <button id="afterBtn">After</button>
+                    <button id="newWindowBtn">Открыть в новом окне</button>
+                </div>
+                
+                <footer>
+                    <p>Управление элементами формы</p>
+                </footer>
+            </article>
+            
+            <article>
+                <div class="form-group">
+                    <label for="cloneInput">Текстовое поле для клонирования:</label>
+                    <input type="text" id="cloneInput" placeholder="Это поле будет клонироваться">
+                </div>
+                
+                <div class="form-group">
+                    <button id="addCloneBtn">Добавить клон</button>
+                    <button id="removeCloneBtn">Удалить клон</button>
+                </div>
+                
+                <div id="cloneContainer" class="clone-container">
+                    <p>Здесь появятся клонированные элементы</p>
+                </div>
+                
+                <footer>
+                    <p>Клонирование элементов</p>
+                </footer>
+            </article>
+        </section>
+        
+        <aside>
+            <h2>Дополнительно</h2>
+            <p>Здесь может быть размещена дополнительная информация или инструкции.</p>
+        </aside>
+        
+        <footer>
+            <p>© 2025 Демонстрация работы с DOM</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+
