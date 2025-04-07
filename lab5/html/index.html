@@ -64,8 +64,6 @@
             <button id="deleteBtn">Удалить запись</button>
             <button id="showDebtorsBtn">Показать должников</button>
             
-            <div id="additionalInfo" class="additional-property"></div>
-            
             <h3>Все записи</h3>
             <div id="recordsTable">
                 <table>
@@ -81,6 +79,13 @@
                     </thead>
                     <tbody id="recordsBody"></tbody>
                 </table>
+            </div>
+
+            <button id="showHistoryBtn">Показать историю изменений</button>
+
+            <div id="historySection" style="display: none; margin-top: 20px;">
+                <h3>История изменений</h3>
+                <div id="changeHistory" style="border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;"></div>
             </div>
         </div>
     </div>
