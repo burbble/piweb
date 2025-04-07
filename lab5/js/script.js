@@ -1,6 +1,7 @@
 const phoneDatabase = {
     records: [],
     additionalProperties: new Set(['email', 'company', 'position']),
+    changeHistory: [],
     
     init() {
         this.loadFromStorage();
@@ -14,6 +15,24 @@ const phoneDatabase = {
         document.getElementById('showDebtorsBtn').addEventListener('click', () => this.showDebtors());
         document.getElementById('addPropertyBtn').addEventListener('click', () => this.addPropertyToRecord());
         document.getElementById('removePropertyBtn').addEventListener('click', () => this.removePropertyFromAll());
+        document.getElementById('showHistoryBtn').addEventListener('click', function() {
+            const historySection = document.getElementById('historySection');
+            const changeHistoryDiv = document.getElementById('changeHistory');
+            
+            changeHistoryDiv.innerHTML = '';
+
+            if (this.changeHistory.length === 0) {
+                changeHistoryDiv.innerHTML = '<p>История изменений пуста.</p>';
+            } else {
+                this.changeHistory.forEach(change => {
+                    const changeItem = document.createElement('div');
+                    changeItem.textContent = change;
+                    changeHistoryDiv.appendChild(changeItem);
+                });
+            }
+
+            historySection.style.display = historySection.style.display === 'none' ? 'block' : 'none';
+        }.bind(this));
     },
     
     loadFromStorage() {
@@ -22,13 +41,15 @@ const phoneDatabase = {
             const parsedData = JSON.parse(savedData);
             this.records = parsedData.records || [];
             this.additionalProperties = new Set(parsedData.additionalProperties || ['email', 'company', 'position']);
+            this.changeHistory = parsedData.changeHistory || [];
         }
     },
     
     saveToStorage() {
         const dataToSave = {
             records: this.records,
-            additionalProperties: Array.from(this.additionalProperties)
+            additionalProperties: Array.from(this.additionalProperties),
+            changeHistory: this.changeHistory
         };
         localStorage.setItem('phoneDatabase', JSON.stringify(dataToSave));
     },
@@ -60,10 +81,12 @@ const phoneDatabase = {
         }
         
         this.records.push(newRecord);
+        this.changeHistory.push(`Добавлена новая запись с ID ${id}`);
         this.saveToStorage();
         this.updateRecordsSelect();
         this.renderTable();
         this.clearForm();
+        this.renderChangeHistory();
     },
     
     clearForm() {
@@ -85,9 +108,11 @@ const phoneDatabase = {
         }
         
         this.records = this.records.filter(record => record.id !== selectedId);
+        this.changeHistory.push(`Запись с ID ${selectedId} была удалена`);
         this.saveToStorage();
         this.updateRecordsSelect();
         this.renderTable();
+        this.renderChangeHistory();
     },
     
     showDebtors() {
@@ -237,6 +262,16 @@ const phoneDatabase = {
             propCell.textContent = propsText || 'Нет дополнительных свойств';
             row.appendChild(propCell);
             tbody.appendChild(row);
+        });
+    },
+    
+    renderChangeHistory() {
+        const historyContainer = document.getElementById('changeHistory');
+        historyContainer.innerHTML = '';
+        this.changeHistory.forEach(change => {
+            const changeItem = document.createElement('div');
+            changeItem.textContent = change;
+            historyContainer.appendChild(changeItem);
         });
     }
 };
