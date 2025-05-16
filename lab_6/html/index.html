@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic News Feed</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>News Feed</h1>
+        <div class="controls">
+            <select id="insertPosition">
+                <option value="before">Before First</option>
+                <option value="after">After Last</option>
+            </select>
+            <input type="text" id="textInput" placeholder="Enter text here">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <button id="addImage">Add Image</button>
+            <button id="addText">Add Text</button>
+        </div>
+        <div id="newsContainer" class="news-container"></div>
+    </div>
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeImageModal">&times;</span>
+            <h2>Выберите изображение</h2>
+            <input type="file" id="modalImageInput" accept="image/*">
+            <button id="confirmImage">Добавить изображение</button>
+        </div>
+    </div>
+
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTextModal">&times;</span>
+            <h2>Введите текст</h2>
+            <input type="text" id="modalTextInput" placeholder="Введите текст здесь" required>
+            <button id="confirmText">Добавить текст</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
