@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создание блоков о путешествиях</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Создай свой блок о путешествиях</h1>
+  </header>
+  <main>
+    <section id="controls">
+      <h2>Настройка блока</h2>
+      <div class="control-group">
+        <label for="size">Размер блока:</label>
+        <select id="size">
+          <option value="small">Маленький (200x300)</option>
+          <option value="medium">Средний (300x400)</option>
+          <option value="large">Большой (400x500)</option>
+          <option value="xlarge">Очень большой (500x600)</option>
+          <option value="custom">Кастомный (600x700)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="margin">Отступы:</label>
+        <select id="margin">
+          <option value="10">10px</option>
+          <option value="20">20px</option>
+          <option value="30">30px</option>
+          <option value="40">40px</option>
+          <option value="50">50px</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="content">Содержимое:</label>
+        <select id="content">
+          <option value="paris">Париж</option>
+          <option value="tokyo">Токио</option>
+          <option value="newyork">Нью-Йорк</option>
+          <option value="sydney">Сидней</option>
+          <option value="iceland">Исландия</option>
+        </select>
+      </div>
+      <button id="addBlock">Добавить блок</button>
+    </section>
+    <section id="blocks"></section>
+  </main>
+  <script src="../js/script.js"></script>
+</body>
+</html>
