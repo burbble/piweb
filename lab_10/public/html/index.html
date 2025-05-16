@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Random Numbers Table</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Numbers Table</h1>
+        <div class="controls">
+            <label for="decimalPlaces">Decimal Places:</label>
+            <select id="decimalPlaces">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button id="sortAsc">Sort Ascending</button>
+            <button id="sortDesc">Sort Descending</button>
+        </div>
+        <h2>Original Array</h2>
+        <table id="originalTable"></table>
+        <h2>Sorted Array</h2>
+        <table id="sortedTable"></table>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
