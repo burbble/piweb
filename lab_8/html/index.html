@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный плеер</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Музыкальный плеер</h1>
+        <div class="input-section">
+            <input type="text" id="songName" placeholder="Название песни">
+            <input type="file" id="songFile" accept="audio/*">
+            <button onclick="addSong()">Добавить песню</button>
+        </div>
+        <div class="player-section">
+            <h2>Текущая песня: <span id="currentSong">Не выбрано</span></h2>
+            <audio id="audioPlayer" controls></audio>
+            <div class="controls">
+                <button onclick="togglePlayback()">Старт/Пауза</button>
+            </div>
+        </div>
+        <div class="song-list">
+            <h3>Список песен</h3>
+            <ul id="songList"></ul>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
